@@ -1,0 +1,38 @@
+<svg width="900" height="140" viewBox="0 0 900 140" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', monospace">
+  <defs>
+    <linearGradient id="c1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0221"/><stop offset="100%" stop-color="#1a0533"/>
+    </linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <rect width="900" height="140" rx="10" fill="url(#c1)" stroke="#222" stroke-width="1"/>
+
+  <!-- REPOS card -->
+  <g transform="translate(40,30)">
+    <rect width="240" height="80" rx="6" fill="#0a0e27" stroke="#00fff9" stroke-width="1" opacity="0.8"/>
+    <text x="20" y="34" font-size="34" font-weight="bold" fill="#00fff9" filter="url(#g)">83
+      <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+    </text>
+    <text x="20" y="62" font-size="11" fill="#8b5cf6" letter-spacing="1">REPOSITORIES</text>
+  </g>
+
+  <!-- STARS card -->
+  <g transform="translate(330,30)">
+    <rect width="240" height="80" rx="6" fill="#0a0e27" stroke="#ff006e" stroke-width="1" opacity="0.8"/>
+    <text x="20" y="34" font-size="34" font-weight="bold" fill="#ff006e" filter="url(#g)">12
+      <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+    </text>
+    <text x="20" y="62" font-size="11" fill="#8b5cf6" letter-spacing="1">STARS EARNED</text>
+  </g>
+
+  <!-- FOLLOWERS card -->
+  <g transform="translate(620,30)">
+    <rect width="240" height="80" rx="6" fill="#0a0e27" stroke="#8b5cf6" stroke-width="1" opacity="0.8"/>
+    <text x="20" y="34" font-size="34" font-weight="bold" fill="#8b5cf6" filter="url(#g)">34
+      <animate attributeName="opacity" values="1;0.6;1" dur="3s" repeatCount="indefinite"/>
+    </text>
+    <text x="20" y="62" font-size="11" fill="#00fff9" letter-spacing="1">FOLLOWERS</text>
+  </g>
+
+  <text x="450" y="135" font-size="9" fill="#333" text-anchor="middle">[ LIVE_STATS // SABOLABS_NODE ]</text>
+</svg>
