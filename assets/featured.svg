@@ -1,0 +1,43 @@
+<svg width="1000" height="200" viewBox="0 0 1000 200" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0221"/><stop offset="100%" stop-color="#1a0533"/>
+    </linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="ts" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00fff9"/><stop offset="100%" stop-color="#00fff9" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="1000" height="200" rx="10" fill="url(#bg)" stroke="#222" stroke-width="1"/>
+
+  <!-- icon -->
+  <g transform="translate(60,100)" filter="url(#g)">
+    <circle r="50" fill="none" stroke="#00fff9" stroke-width="2">
+      <animate attributeName="stroke" values="#00fff9;#ff006e;#00fff9" dur="5s" repeatCount="indefinite"/>
+    </circle>
+    <path d="M-20 -10 L0 20 L20 -10" fill="none" stroke="#ff006e" stroke-width="3"/>
+    <circle cx="0" cy="-25" r="6" fill="#00fff9"/>
+  </g>
+
+  <!-- text -->
+  <g transform="translate(160,60)">
+    <text x="0" y="0" font-size="24" font-weight="bold" fill="#00fff9" filter="url(#g)">⚛ quantum-web3</text>
+    <text x="0" y="28" font-size="13" fill="#c9d1d9">Decentralized Web3 infrastructure built with TypeScript.</text>
+    <text x="0" y="50" font-size="13" fill="#c9d1d9">Cross-chain swap engine + on-chain oracle integration.</text>
+
+    <!-- tech badges -->
+    <rect x="0" y="70" width="90" height="24" rx="4" fill="#0a0e27" stroke="#00fff9" stroke-width="0.8"/>
+    <text x="45" y="86" font-size="11" fill="#00fff9" text-anchor="middle">TypeScript</text>
+
+    <rect x="100" y="70" width="60" height="24" rx="4" fill="#0a0e27" stroke="#ff006e" stroke-width="0.8"/>
+    <text x="130" y="86" font-size="11" fill="#ff006e" text-anchor="middle">Web3</text>
+
+    <rect x="170" y="70" width="70" height="24" rx="4" fill="#0a0e27" stroke="#8b5cf6" stroke-width="0.8"/>
+    <text x="205" y="86" font-size="11" fill="#8b5cf6" text-anchor="middle">DeFi</text>
+
+    <text x="0" y="120" font-size="11" fill="#555">⭐ 2 · 🍴 0 · 🔄 Active</text>
+  </g>
+
+  <!-- link arrow -->
+  <text x="940" y="105" font-size="20" fill="#ff006e" text-anchor="end">›_</text>
+
+  <text x="500" y="195" font-size="9" fill="#333" text-anchor="middle">[ FEATURED // SABOLABS_NODE ]</text>
+</svg>

@@ -14,7 +14,22 @@
   <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
 </p>
 
-<!-- STREAK + TROPHIES -->
+<!-- NOW BUILDING -->
+<div align="center">
+
+## ▸ NOW BUILDING
+
+<img src="assets/building.svg" width="100%" alt="Now Building" />
+
+</div>
+
+<br>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
+</p>
+
+<!-- STREAK -->
 <div align="center">
 
 ## ▸ CONTRIBUTION HEAT
@@ -32,14 +47,25 @@
   <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
 </p>
 
-<!-- STATS + LANGS self-hosted -->
+<!-- SNAKE -->
 <div align="center">
 
-## ▸ ACHIEVEMENTS
+## ▸ CONTRIBUTION SNAKE
+
+<img src="https://raw.githubusercontent.com/naninu123/naninu123/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Snake animation" />
+
+</div>
+
+<br>
 
 <p align="center">
-  <img src="assets/stats.svg" width="100%" alt="GitHub Stats" />
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
 </p>
+
+<!-- STATS + LANGS -->
+<div align="center">
+
+## ▸ STATISTICS
 
 <p align="center">
   <img src="assets/langs.svg" width="100%" alt="Top Languages" />
@@ -53,12 +79,14 @@
   <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
 </p>
 
-<!-- SNAKE CONTRIBUTION -->
+<!-- FEATURED PROJECT -->
 <div align="center">
 
-## ▸ CONTRIBUTION SNAKE
+## ▸ FEATURED
 
-<img src="https://raw.githubusercontent.com/naninu123/naninu123/output/github-contribution-grid-snake-dark.svg" width="100%" alt="Snake animation" />
+<a href="https://github.com/naninu123/quantum-web3">
+  <img src="assets/featured.svg" width="100%" alt="Featured: quantum-web3" />
+</a>
 
 </div>
 
@@ -85,36 +113,15 @@
   <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
 </p>
 
-<!-- PROJECTS -->
-<div align="center">
-
-## ▸ PINNED PROJECTS
-
-| Project | Stars | Tags |
-|:--------|:-----:|:----:|
-| <a href="https://github.com/naninu123/quantum-web3">⚛ quantum-web3</a> | ⭐ 2 | TypeScript, Web3 |
-| <a href="https://github.com/naninu123/ai-agent-security">🛡 ai-agent-security</a> | ⭐ 1 | AI, Security |
-| <a href="https://github.com/naninu123/circle-bbp-dos-poc">🔴 circle-bbp-dos</a> | ⭐ 0 | Solidity, POC |
-| <a href="https://github.com/naninu123/nebula-swap">🌌 nebula-swap</a> | ⭐ 0 | Web3, DEX |
-| <a href="https://github.com/naninu123/soroban-security-portal">🔐 soroban-security</a> | ⭐ 1 | Soroban |
-
-</div>
-
-<br>
-
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
-</p>
-
 <!-- SOCIALS -->
 <div align="center">
 
 ## ▸ UPLINK
 
 <p align="center">
-  <a href="https://github.com/naninu123"><img src="https://img.shields.io/badge/GitHub-naninu123-00fff9?style=for-the-badge&logo=github&logoColor=white&labelColor=0d0221" /></a>
-  <a href="https://twitter.com/setsutzy"><img src="https://img.shields.io/badge/X-%40setsutzy-ff006e?style=for-the-badge&logo=x&logoColor=white&labelColor=0d0221" /></a>
-  <img src="https://img.shields.io/badge/Discord-sabo%239166-8b5cf6?style=for-the-badge&logo=discord&logoColor=white&labelColor=0d0221" />
+  <a href="https://github.com/naninu123"><img src="https://img.shields.io/badge/-naninu123-0d0221?style=for-the-badge&logo=github&logoColor=00fff9" /></a>
+  <a href="https://twitter.com/setsutzy"><img src="https://img.shields.io/badge/-%40setsutzy-0d0221?style=for-the-badge&logo=x&logoColor=ff006e" /></a>
+  <img src="https://img.shields.io/badge/-sabodev-0d0221?style=for-the-badge&logo=telegram&logoColor=8b5cf6" />
 </p>
 
 <br>
@@ -125,7 +132,7 @@
    ╚══════════════════════════════════════════╝
 </pre>
 
-<img src="https://komarev.com/ghpvc/?username=naninu123&label=VIEWS&color=00fff9&style=flat-square" />
+<img src="https://komarev.com/ghpvc/?username=naninu123&label=VISITOR&color=ff006e&style=flat-square&base=1" />
 <br>
 <sub>⚡ SaboLabs Cyberpunk Dev · 2026 ⚡</sub>
 
