@@ -32,13 +32,14 @@
   <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
 </p>
 
-<!-- TROPHIES -->
+<!-- TOP LANGS + STATS -->
 <div align="center">
 
 ## ▸ ACHIEVEMENTS
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=naninu123&theme=radical&no-frame=true&row=1&column=6" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=naninu123&layout=compact&theme=tokyonight&bg_color=0d0221&title_color=00fff9&text_color=c9d1d9&hide_border=true" height="160" />
+  <img src="https://github-readme-stats.vercel.app/api?username=naninu123&show_icons=true&theme=tokyonight&bg_color=0d0221&title_color=00fff9&text_color=c9d1d9&icon_color=ff006e&hide_border=true" height="160" />
 </p>
 
 </div>
