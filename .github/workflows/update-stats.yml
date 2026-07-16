@@ -39,22 +39,45 @@ jobs:
 
           path = "assets/stats.svg"
           s = open(path).read()
-          # replace first occurrence of each number inside the 3 card texts
           import re
-          # repos card (first 34px bold text)
           def repl(s, old, new):
               return s.replace(f'">{old}<', f'">{new}<', 1)
-          # order in file: repos(83), stars(9), followers(5)
           s = repl(s, "83", str(publics))
           s = repl(s, "9", str(stars))
           s = repl(s, "5", str(followers))
           open(path,"w").write(s)
-          print("updated:", publics, stars, followers)
+
+          # Language distribution
+          langs = {}
+          for r in repos:
+              l = r.get("language")
+              if l and not r.get("fork"):
+                  langs[l] = langs.get(l,0) + 1
+          total = sum(langs.values()) or 1
+          top = sorted(langs.items(), key=lambda x:-x[1])[:4]
+          names = [f'{n} ' for n,c in top]
+          pcts = [f'{c/total*100:.1f}%' for n,c in top]
+          # write langs.svg
+          lp = "assets/langs.svg"
+          ls = open(lp).read()
+          # simple: replace first % value + width by recompute bars
+          import re as _re
+          # bars width scale: 820px = 100%
+          scales = {"TypeScript":451, "HTML":205, "Shell":164, "Other":164}
+          for name, pct in zip([n for n,c in top], [c/total*100 for n,c in top]):
+              w = int(820 * pct/100)
+              # find bar rect after the matching label text
+              pat = _re.compile(r'(<text[^>]*>'+_re.escape(name)+r'<.*?</text>\s*<rect[^>]*/>\s*<rect[^>]*width=")\d+(")')
+              ls = pat.sub(lambda m: m.group(1)+str(w)+m.group(2), ls, count=1)
+              # label pct
+              ls = _re.sub(r'(<text[^>]*'+_re.escape(name)+r'<.*?</text>\s*<text[^>]*>)[^<]*(</text>)', lambda m: m.group(1)+f'{pct:.1f}%'+m.group(2), ls, count=1)
+          open(lp,"w").write(ls)
+          print("updated:", publics, stars, followers, "langs:", top)
           PY
       - name: Commit
         run: |
           git config user.name "stats-bot"
           git config user.email "bot@sabolabs.dev"
-          git add assets/stats.svg
+          git add assets/stats.svg assets/langs.svg
           git commit -m "chore: auto-update stats" || echo "no change"
           git push

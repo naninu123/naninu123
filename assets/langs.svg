@@ -1,0 +1,44 @@
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" font-family="'Courier New', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0d0221"/><stop offset="100%" stop-color="#1a0533"/>
+    </linearGradient>
+    <filter id="g"><feGaussianBlur stdDeviation="2" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <linearGradient id="ts" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#00fff9"/><stop offset="100%" stop-color="#00fff9" stop-opacity="0"/></linearGradient>
+    <linearGradient id="html" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#ff006e"/><stop offset="100%" stop-color="#ff006e" stop-opacity="0"/></linearGradient>
+    <linearGradient id="other" x1="0" y1="0" x2="1" y2="0"><stop offset="0%" stop-color="#8b5cf6"/><stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/></linearGradient>
+  </defs>
+  <rect width="900" height="220" rx="10" fill="url(#bg)" stroke="#222" stroke-width="1"/>
+
+  <text x="40" y="40" font-size="16" font-weight="bold" fill="#00fff9" letter-spacing="2" filter="url(#g)">▸ TOP LANGUAGES</text>
+  <line x1="40" y1="52" x2="860" y2="52" stroke="#222" stroke-width="1"/>
+
+  <!-- bar group -->
+  <g transform="translate(40,75)">
+    <!-- TypeScript -->
+    <text x="0" y="0" font-size="13" fill="#c9d1d9">TypeScript</text>
+    <text x="800" y="0" font-size="13" fill="#00fff9" text-anchor="end">55.0%</text>
+    <rect x="0" y="12" width="820" height="14" rx="7" fill="#0a0e27" stroke="#16213e" stroke-width="0.5"/>
+    <rect x="0" y="12" width="451" height="14" rx="7" fill="url(#ts)">
+      <animate attributeName="width" values="0;451" dur="2s" fill="freeze"/>
+    </rect>
+
+    <!-- HTML -->
+    <text x="0" y="44" font-size="13" fill="#c9d1d9">HTML</text>
+    <text x="800" y="44" font-size="13" fill="#ff006e" text-anchor="end">25.0%</text>
+    <rect x="0" y="56" width="820" height="14" rx="7" fill="#0a0e27" stroke="#16213e" stroke-width="0.5"/>
+    <rect x="0" y="56" width="205" height="14" rx="7" fill="url(#html)">
+      <animate attributeName="width" values="0;205" dur="2s" fill="freeze"/>
+    </rect>
+
+    <!-- Other -->
+    <text x="0" y="88" font-size="13" fill="#c9d1d9">Shell · Solidity · Python · JS</text>
+    <text x="800" y="88" font-size="13" fill="#8b5cf6" text-anchor="end">20.0%</text>
+    <rect x="0" y="100" width="820" height="14" rx="7" fill="#0a0e27" stroke="#16213e" stroke-width="0.5"/>
+    <rect x="0" y="100" width="164" height="14" rx="7" fill="url(#other)">
+      <animate attributeName="width" values="0;164" dur="2s" fill="freeze"/>
+    </rect>
+  </g>
+
+  <text x="450" y="215" font-size="9" fill="#333" text-anchor="middle">[ LANG_DIST // 20 REPOS ANALYZED ]</text>
+</svg>

@@ -32,14 +32,17 @@
   <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
 </p>
 
-<!-- TOP LANGS + STATS -->
+<!-- STATS + LANGS self-hosted -->
 <div align="center">
 
 ## ▸ ACHIEVEMENTS
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=naninu123&layout=compact&theme=tokyonight&bg_color=0d0221&title_color=00fff9&text_color=c9d1d9&hide_border=true" height="160" />
-  <img src="https://github-readme-stats.vercel.app/api?username=naninu123&show_icons=true&theme=tokyonight&bg_color=0d0221&title_color=00fff9&text_color=c9d1d9&icon_color=ff006e&hide_border=true" height="160" />
+  <img src="assets/stats.svg" width="100%" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="assets/langs.svg" width="100%" alt="Top Languages" />
 </p>
 
 </div>
