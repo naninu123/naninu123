@@ -1,0 +1,74 @@
+name: Update WakaTime SVG
+
+on:
+  schedule:
+    - cron: "47 */3 * * *"   # every 3h
+  workflow_dispatch:
+
+jobs:
+  waka:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch WakaTime + rewrite svg
+        env:
+          WAKA_KEY: ${{ secrets.WAKA_KEY }}
+        run: |
+          pip install requests >/dev/null 2>&1
+          python3 - <<'PY'
+          import os, json, urllib.request, base64
+
+          key = os.environ["WAKA_KEY"]
+          auth = base64.b64encode(key.encode()).decode()
+          url = "https://api.wakatime.com/api/v1/users/current/stats/last_7_days"
+          req = urllib.request.Request(url, headers={"Authorization":"Basic "+auth})
+          data = json.load(urllib.request.urlopen(req, timeout=30))
+
+          total = data["data"]["human_readable_total"]           # e.g. "42h 18m"
+          langs = data["data"]["languages"][:4]                 # [{"name","percent"},...]
+          names = [l["name"] for l in langs]
+          pcts  = [round(l["percent"],1) for l in langs]
+
+          # width per bar: 560px = 100%
+          widths = [int(560 * p/100) for p in pcts]
+
+          path = "assets/wakatime.svg"
+          s = open(path).read()
+
+          # 1) replace total hours
+          import re
+          s = re.sub(r'(font-size="36"[^>]*>)[^<]*(</text>)', lambda m: m.group(1)+total+m.group(2), s, count=1)
+
+          # 2) per-language: name + pct + bar width
+          # pattern: <text ...>NAME</text> ... <text ...>PCT%</text> ... width="N"
+          for name, pct, w in zip(names, pcts, widths):
+              # label name
+              s = re.sub(r'(<text[^>]*>)'+re.escape(name)+r'(</text>)',
+                         lambda m: m.group(1)+name+m.group(2), s, count=1)
+              # pct text (the one right after name with text-anchor=end)
+              # find the block: name text, then later a text-anchor=end with old pct
+              # simpler: replace the 4 pct values in order
+          # replace pcts in order of appearance
+          pct_pattern = re.compile(r'(<text[^>]*text-anchor="end">)[^<]*(</text>)')
+          for pct in pcts:
+              s = pct_pattern.sub(lambda m: m.group(1)+f"{pct}%"+"</text>", s, count=1)
+          # replace bar widths in order
+          w_pattern = re.compile(r'(<rect[^>]*width=")\d+(")')
+          for w in widths:
+              s = w_pattern.sub(lambda m: m.group(1)+str(w)+m.group(2), s, count=1)
+
+          open(path,"w").write(s)
+          print("waka updated:", total, "langs:", list(zip(names,pcts)))
+          PY
+      - name: Commit
+        run: |
+          git config user.name "waka-bot"
+          git config user.email "bot@sabolabs.dev"
+          git add assets/wakatime.svg
+          git commit -m "chore: auto-update wakatime" || echo "no change"
+          git push

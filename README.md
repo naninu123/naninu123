@@ -14,6 +14,21 @@
   <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
 </p>
 
+<!-- WAKATIME -->
+<div align="center">
+
+## ▸ CODING TIME
+
+<img src="assets/wakatime.svg" width="100%" alt="WakaTime Coding Stats" />
+
+</div>
+
+<br>
+
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=rect&height=2&color=0:00fff9,100:ff006e&section=header&reversal=false" width="100%" />
+</p>
+
 <!-- NOW BUILDING -->
 <div align="center">
 
