@@ -1,0 +1,24 @@
+name: Snale Contribution Grid
+
+on:
+  schedule:
+    # runs every 6 hours
+    - cron: "0 */6 * * *"
+  workflow_dispatch:
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+      - name: Push to output branch
+        uses: crazy-max/ghaction-github-pages-deploy@v4
+        with:
+          target_branch: output
+          build_dir: dist

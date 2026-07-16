@@ -1,0 +1,60 @@
+name: Update Stats SVG
+
+on:
+  schedule:
+    - cron: "13 3 * * *"   # 03:13 UTC daily
+  workflow_dispatch:
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch GitHub data and rewrite stats.svg
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USER: naninu123
+        run: |
+          pip install requests >/dev/null 2>&1
+          python3 - <<'PY'
+          import os, json, urllib.request
+
+          user = os.environ["USER"]
+          def get(url):
+              req = urllib.request.Request(url, headers={"User-Agent":"stats-bot"})
+              return json.load(urllib.request.urlopen(req, timeout=20))
+
+          u = get(f"https://api.github.com/users/{user}")
+          repos = get(f"https://api.github.com/users/{user}/repos?per_page=100&type=owner")
+          stars = sum(r.get("stargazers_count",0) for r in repos if not r.get("fork"))
+          followers = u.get("followers",0)
+          following = u.get("following",0)
+          publics = u.get("public_repos",0)
+
+          path = "assets/stats.svg"
+          s = open(path).read()
+          # replace first occurrence of each number inside the 3 card texts
+          import re
+          # repos card (first 34px bold text)
+          def repl(s, old, new):
+              return s.replace(f'">{old}<', f'">{new}<', 1)
+          # order in file: repos(83), stars(9), followers(5)
+          s = repl(s, "83", str(publics))
+          s = repl(s, "9", str(stars))
+          s = repl(s, "5", str(followers))
+          open(path,"w").write(s)
+          print("updated:", publics, stars, followers)
+          PY
+      - name: Commit
+        run: |
+          git config user.name "stats-bot"
+          git config user.email "bot@sabolabs.dev"
+          git add assets/stats.svg
+          git commit -m "chore: auto-update stats" || echo "no change"
+          git push
