@@ -18,7 +18,7 @@ jobs:
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
       - name: Push to output branch
-        uses: crazy-max/ghaction-github-pages-deploy@v4
+        uses: crazy-max/gha-pages-deploy@v4
         with:
           target_branch: output
           build_dir: dist
