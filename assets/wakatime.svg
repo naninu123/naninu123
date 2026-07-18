@@ -22,7 +22,7 @@
   <g transform="translate(380,68)">
     <!-- TypeScript -->
     <text x="0" y="0" font-size="12" fill="#c9d1d9">TypeScript</text>
-    <text x="560" y="0" font-size="12" fill="#00fff9" text-anchor="end">0.0%</text>
+    <text x="560" y="0" font-size="12" fill="#00fff9" text-anchor="end">0%</text>
     <rect x="0" y="8" width="560" height="10" rx="5" fill="#0a0e27" stroke="#16213e" stroke-width="0.5"/>
     <rect x="0" y="8" width="270" height="10" rx="5" fill="url(#ts)"/>
 
