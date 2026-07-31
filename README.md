@@ -1,5 +1,9 @@
 # 💀 King (Sabo)
 
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=3000&pause=1000&color=00fff9&center=true&vCenter=true&width=435&lines=Welcome+to+my+profile%2C+Sabo!;Web3+Security+Researcher;AI+Agent+Engineer" alt="Typing SVG" />
+</p>
+
 [![GitHub Stars](https://img.shields.io/github/stars/naninu123?style=flat-square&color=ff006e)](https://github.com/naninu123)
 [![GitHub Followers](https://img.shields.io/github/followers/naninu123?style=flat-square&color=00fff9)](https://github.com/naninu123)
 
