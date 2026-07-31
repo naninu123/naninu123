@@ -38,7 +38,7 @@ Web3 Security Researcher, Bug Hunter, and Autonomous AI Agent Engineer. Founder 
 Available for Open Source Development, Security Audits, Bug Fixes, and Feature Development.
 
 * **Email:** [al7795927@gmail.com](mailto:al7795927@gmail.com) / [lanayusep8@gmail.com](mailto:lanayusep8@gmail.com)
-* **Telegram:** [@sabodev](https://t.me/sabodev)
+* **Telegram:** [@yusep124](https://t.me/yusep124)
 * **Discord:** `sabo`
 
 ---
