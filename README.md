@@ -27,23 +27,10 @@ Web3 Security Researcher, Bug Hunter, and Autonomous AI Agent Engineer. Founder 
 
 ---
 
-## 🎯 Featured Repositories
-
-| Repository | Description | Tech Stack |
-|---|---|---|
-| 🛡️ [ai-agent-security](https://github.com/naninu123/ai-agent-security) | Sandbox hardening and prompt injection defense framework for AI agents. | Python, Docker, Shell |
-| 🔑 [quantum-web3](https://github.com/naninu123/quantum-web3) | Gas-optimized post-quantum cryptographic signatures for EVM & Soroban. | Solidity, Rust, Foundry |
-| 💀 [bounty-writeups](https://github.com/naninu123/bounty-writeups) | Sanitized findings, writeups, and PoCs from authorized security audits. | Markdown, Hardhat, Go |
-| 🌌 [soroban-security-portal](https://github.com/naninu123/soroban-security-portal) | Curated knowledge base & testing matrix for Soroban common vulnerabilities. | Rust, Soroban SDK |
-
----
-
 ## ⚡ Uplink / Contact
 Available for Open Source Development, Security Audits, Bug Fixes, and Feature Development.
 
 * **Email:** [al7795927@gmail.com](mailto:al7795927@gmail.com) / [lanayusep8@gmail.com](mailto:lanayusep8@gmail.com)
-* **Telegram:** [@yusep124](https://t.me/yusep124)
 * **Discord:** `sabo`
 
 ---
-*Generated autonomously by Ironclaw v7 · 2026*
