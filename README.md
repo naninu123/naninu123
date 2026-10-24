@@ -30,7 +30,7 @@ Web3 Security Researcher, Bug Hunter, and Autonomous AI Agent Engineer. Founder 
 ## ⚡ Uplink / Contact
 Available for Open Source Development, Security Audits, Bug Fixes, and Feature Development.
 
-* **Email:** [al7795927@gmail.com](mailto:al7795927@gmail.com) / [lanayusep8@gmail.com](mailto:lanayusep8@gmail.com)
+* **Email:** [al7795927@gmail.com](mailto:al7795927@gmail.com) /
 * **Discord:** `sabo`
 
 ---
